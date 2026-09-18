@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { useAuth } from "../../context/AuthContext";
 
-export default function LoginPage() {
+function LoginForm() {
   const { login } = useAuth();
 
   const router = useRouter();
@@ -39,9 +39,7 @@ export default function LoginPage() {
       await login(form.email, form.password);
       router.replace(next);
     } catch (err) {
-      setError(
-        err.message || "Unable to sign in."
-      );
+      setError(err.message || "Unable to sign in.");
     } finally {
       setLoading(false);
     }
@@ -60,10 +58,7 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="card p-6 sm:p-8"
-        >
+        <form onSubmit={handleSubmit} className="card p-6 sm:p-8">
           {error && (
             <div className="mb-5 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">
               {error}
@@ -71,9 +66,7 @@ export default function LoginPage() {
           )}
 
           <div>
-            <label className="label">
-              Email
-            </label>
+            <label className="label">Email</label>
 
             <input
               name="email"
@@ -87,9 +80,7 @@ export default function LoginPage() {
           </div>
 
           <div className="mt-5">
-            <label className="label">
-              Password
-            </label>
+            <label className="label">Password</label>
 
             <input
               name="password"
@@ -121,5 +112,13 @@ export default function LoginPage() {
         </form>
       </div>
     </main>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={null}>
+      <LoginForm />
+    </Suspense>
   );
 }
