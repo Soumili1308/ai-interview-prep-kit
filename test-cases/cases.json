@@ -1,0 +1,32 @@
+[
+  {
+    "id": "case-01",
+    "jd": "Senior Backend Engineer\n\nWe are looking for a Senior Backend Engineer to design, build, and maintain scalable backend services. Requirements: 5+ years of experience with Node.js, strong knowledge of REST APIs, experience with PostgreSQL and MongoDB, familiarity with Docker, and strong problem-solving skills. Experience mentoring junior engineers is a plus.",
+    "company_url": "https://www.gitlab.com/",
+    "days": 5
+  },
+  {
+    "id": "case-02",
+    "jd": "Frontend Developer\n\nWe are looking for a Frontend Developer with experience building responsive web applications. Required skills include JavaScript, React, HTML, CSS, REST API integration, and Git. Candidates should be comfortable working with designers and collaborating with backend developers.",
+    "company_url": "https://www.posthog.com/",
+    "days": 7
+  },
+  {
+    "id": "case-03",
+    "jd": "Junior Software Engineer\n\nWe are looking for a software engineer who can write clean code and work effectively with a team. Experience with Python is required. Knowledge of SQL and Git is preferred.",
+    "company_url": "https://example.com/",
+    "days": 3
+  },
+  {
+    "id": "case-04",
+    "jd": "Software Developer\n\nPython developer needed. SQL knowledge preferred.",
+    "company_url": "https://www.gitlab.com/",
+    "days": 1
+  },
+  {
+    "id": "case-05",
+    "jd": "We are hiring a software engineer. Strong communication and programming skills are required.",
+    "company_url": "https://www.posthog.com/",
+    "days": 60
+  }
+]
